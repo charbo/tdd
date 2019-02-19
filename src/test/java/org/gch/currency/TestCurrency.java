@@ -2,7 +2,7 @@ package org.gch.currency;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class TestCurrency {
 
@@ -17,4 +17,9 @@ public class TestCurrency {
 
     }
 
+    @Test
+    public void testEquality() {
+        assertTrue(new Dollar(5).equals(new Dollar(5)));
+        assertNotEquals(new Dollar(5), new Dollar(6));
+    }
 }
